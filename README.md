@@ -12,20 +12,21 @@ http://builder.swillkb.com/
 ## Supported Boards:
 * Pro Micro (Tested on 5V 16MHz, but it should work on 3.3V 8MHz as well)
 
-## Versions:
-### Example 2x2Key 2Layer
+## Example 2x2Key 2Layer
 An example project to get the basics to work with just 4 buttons. 
 It requires 4 pins, 2 output(Columns) and 2 input(Rows).
 
+The pin variables in "Example_2x2Key_2Layer.ino" should be adjusted to correspond to the pins you used on your board.
+
 ![2x2 keymap layout](https://raw.githubusercontent.com/Ladus/ArduinoKeyboardFirmware/development/ProMicro/Example_2x2Key_2Layer/keyboard-layout.png)
 
-#### Rows and Columns
+### Rows and Columns
 
 |       | Col0  | Col1  |     |        | Col0  | Col1  |
 | ---   | ---   | ---   | --- | ---    | ---   | ---   |
 |Row 0  | 1     | 2     |     | Row 0  | !     | @     |
 |Row 1  | 3     | Raise |     | Row 1  | #     | Raise |
 
-### Planck 12x4Key 3Layer
+## Planck 12x4Key 3Layer
 **Not Implemented Yet**
 The project for which I started this endeavour. Wanting to create my own Planck-like Grid Keyboard, with 48 keys (12x4)
