@@ -12,18 +12,28 @@ const int LAYER_RAISE = 1;
 extern int Keymap[LAYERS][ROWS][COLUMNS];
 int PressedButtons[LAYERS][ROWS][COLUMNS];
 
+
+////ADJUST TO YOUR PINS
 //Loop Delay
 int delayLoopPin = 21;
 
 //Input pins
-int Col0Pin = 2;
-int Col1Pin = 3;
-int Row0Pin = 4;
-int Row1Pin = 5;
+int ColPins[COLUMNS] = {2,3};
+int RowPins[ROWS] = {4,5};
 
 void setup()
 {
   pinMode(delayLoopPin, INPUT_PULLUP);
+
+  //Cols
+  pinMode(delayLoopPin, OUTPUT);
+  pinMode(delayLoopPin, OUTPUT);
+
+  //Rows
+  pinMode(delayLoopPin, INPUT);
+  pinMode(delayLoopPin, INPUT);
+
+  
 }
 
 void loop()
