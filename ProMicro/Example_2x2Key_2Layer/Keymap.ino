@@ -1,4 +1,4 @@
-int Keymap[LAYERS][ROWS][COLUMNS] = 
+const int Keymap[LAYERS][ROWS][COLUMNS] = 
 {
   {//Layer Raise
     {//Row 0
