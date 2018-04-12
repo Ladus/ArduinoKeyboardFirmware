@@ -17,16 +17,14 @@ http://builder.swillkb.com/
 An example project to get the basics to work with just 4 buttons. 
 It requires 4 pins, 2 output(Columns) and 2 input(Rows).
 
-#### Default Layer
-|       | Col0  | Col1  |
-| ---   | ---   | ---   |
-|Row 0  | 1     | 2     |
-|Row 1  | 3     | Raise |
-#### Raised Layer
-|       | Col0  | Col1  |
-| ---   | ---   | ---   |
-|Row 0  | !     | @     |
-|Row 1  | #     | Raise |
+![2x2 keymap layout](https://raw.githubusercontent.com/Ladus/ArduinoKeyboardFirmware/development/ProMicro/Example_2x2Key_2Layer/keyboard-layout.png)
+
+#### Rows and Columns
+
+|       | Col0  | Col1  |     |        | Col0  | Col1  |
+| ---   | ---   | ---   | --- | ---    | ---   | ---   |
+|Row 0  | 1     | 2     |     | Row 0  | !     | @     |
+|Row 1  | 3     | Raise |     | Row 1  | #     | Raise |
 
 ### Planck 12x4Key 3Layer
 **Not Implemented Yet**
