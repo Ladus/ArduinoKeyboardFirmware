@@ -19,7 +19,7 @@ const int NO_ACTION = 0;
 const int LAYER_RAISE = 1;
 
 //Keymap
-int PressedButtons[LAYERS][ROWS][COLUMNS];
+int switchStates[LAYERS][ROWS][COLUMNS];
 int currentLayer = 1; //1 default; 2 raised; 
 
 
@@ -37,6 +37,7 @@ void loop()
 void delayByPin() {
   //If delayPin becomes low (connected to ground) then delay loop
   //implemented to stop the chip from becoming stuck in a key spamming loop
+  //Note: Can be removed if in need of the extra pin
   while (digitalRead(delayLoopPin) == LOW) 
   {
     delay(8000);
