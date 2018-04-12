@@ -26,23 +26,19 @@ void setup()
   pinMode(delayLoopPin, INPUT_PULLUP);
 
   //Cols
-  pinMode(delayLoopPin, OUTPUT);
-  pinMode(delayLoopPin, OUTPUT);
+  for(i=0; i<COLUMNS; i++){
+    pinMode(ColPins[i], OUTPUT);
+  }
 
   //Rows
-  pinMode(delayLoopPin, INPUT);
-  pinMode(delayLoopPin, INPUT);
-
-  
+  for(i=0; i<ROWS; i++){
+    pinMode(RowPins[i], INPUT);
+  }
 }
 
 void loop()
 {
-  //Delay loop
-  while (digitalRead(delayLoopPin) == HIGH) 
-  {
-    delay(8000);
-  }
+  delayByPin();
 
   //loop through columns, loop through rows and read outputs
   
@@ -52,6 +48,12 @@ void loop()
   //  check if layer button then check if changed, if changed release all
   //    create release all/clear pressedButtons array function
   //  get button from keymap according to layer,row,column number and press
-  
-  delay(1000); 
 }
+
+function delayByPin() {
+  while (digitalRead(delayLoopPin) == LOW) 
+  {
+    delay(8000);
+  }
+}
+
