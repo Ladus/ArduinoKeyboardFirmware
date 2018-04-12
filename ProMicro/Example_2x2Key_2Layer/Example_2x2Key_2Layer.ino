@@ -51,6 +51,8 @@ void loop()
 }
 
 function delayByPin() {
+  //If delayPin becomes low (connected to ground) then delay loop
+  //implemented to stop the chip from becoming stuck in a key spamming loop
   while (digitalRead(delayLoopPin) == LOW) 
   {
     delay(8000);
