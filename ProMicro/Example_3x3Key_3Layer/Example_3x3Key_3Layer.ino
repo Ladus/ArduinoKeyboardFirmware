@@ -20,7 +20,7 @@ const int LAYER_RAISE = 1;
 const int LAYER_LOWER = 2;
 
 //Keymap
-bool switchStates[LAYERS][ROWS][COLUMNS];
+bool switchStates[ROWS][COLUMNS];
 int currentLayer = 1; //0 raised; 1 default; 
 
 
@@ -34,6 +34,7 @@ void loop()
 {
   delayByPin();
   switchMatrixLoop();
+  delay(10);
 }
 
 void delayByPin() {
