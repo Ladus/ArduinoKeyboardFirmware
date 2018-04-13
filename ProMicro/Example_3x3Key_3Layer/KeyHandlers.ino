@@ -41,11 +41,9 @@ void keyReleaseHandler(int key) //Key Release
 
 void releaseAllSwitchStates() //Clear switchStates array
 {
-  for(int x = 0; x < LAYERS; x++){
-    for(int y = 0; y < ROWS; y++){
-      for(int z = 0; z < COLUMNS; z++){
-        switchStates[LAYERS][ROWS][COLUMNS] = false;
-      }
+  for(int y = 0; y < ROWS; y++){
+    for(int z = 0; z < COLUMNS; z++){
+      switchStates[ROWS][COLUMNS] = false;
     }
   }
 }
