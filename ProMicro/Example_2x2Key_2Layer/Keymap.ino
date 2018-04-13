@@ -2,12 +2,12 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
 {
   {//Layer Raise
     {//Row 0
-      '!',
-      '@'
+      'r',
+      'o'
     },
     {//Row 1
-      '#',
-      '$'
+      'y',
+      LAYER_RAISE
     }
   },
   {//Layer Lower
@@ -17,7 +17,7 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
     },
     {//Row 1
       '3',
-      '4'
+      LAYER_RAISE
     }
   }
 };

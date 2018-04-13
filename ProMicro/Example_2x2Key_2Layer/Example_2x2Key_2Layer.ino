@@ -20,12 +20,13 @@ const int LAYER_RAISE = 1;
 
 //Keymap
 int switchStates[LAYERS][ROWS][COLUMNS];
-int currentLayer = 1; //1 default; 2 raised; 
+int currentLayer = 1; //0 raised; 1 default; 
 
 
 void setup()
 {
   setupPins();
+  Serial.begin(9600); 
 }
 
 void loop()
@@ -43,3 +44,14 @@ void delayByPin() {
     delay(8000);
   }
 }
+
+void releaseAllSwitchStates() {
+  for(int x = 0; x < LAYERS; x++){
+    for(int y = 0; y < ROWS; y++){
+      for(int z = 0; z < COLUMNS; z++){
+        switchStates[LAYERS][ROWS][COLUMNS];
+      }
+    }
+  }
+}
+
