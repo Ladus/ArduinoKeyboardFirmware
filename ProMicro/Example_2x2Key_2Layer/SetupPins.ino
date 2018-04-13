@@ -1,14 +1,13 @@
 void setupPins() {
   pinMode(delayLoopPin, INPUT_PULLUP);
 
-  //Cols
+  //Setup col pins
   for(int i=0; i<COLUMNS; i++){
-    pinMode(ColPins[i], OUTPUT);
-    digitalWrite(ColPins[i], LOW); 
+    pinMode(ColPins[i], INPUT_PULLUP);
   }
 
-  //Rows
+  //Setup row pins
   for(int i=0; i<ROWS; i++){
-    pinMode(RowPins[i], INPUT_PULLUP);
+    pinMode(RowPins[i], OUTPUT);
   }
 }
