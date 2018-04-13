@@ -1,3 +1,7 @@
+//For ascii & arduino keyboard specific keycodes see:
+//http://www.asciitable.com/
+//https://www.arduino.cc/en/Reference/KeyboardModifiers
+
 const int Keymap[LAYERS][ROWS][COLUMNS] = 
 {
   {//Layer Raise
