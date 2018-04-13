@@ -19,7 +19,7 @@ const int NO_ACTION = 0;
 const int LAYER_RAISE = 1;
 
 //Keymap
-int switchStates[LAYERS][ROWS][COLUMNS];
+bool switchStates[LAYERS][ROWS][COLUMNS];
 int currentLayer = 1; //0 raised; 1 default; 
 
 
@@ -44,14 +44,3 @@ void delayByPin() {
     delay(8000);
   }
 }
-
-void releaseAllSwitchStates() {
-  for(int x = 0; x < LAYERS; x++){
-    for(int y = 0; y < ROWS; y++){
-      for(int z = 0; z < COLUMNS; z++){
-        switchStates[LAYERS][ROWS][COLUMNS];
-      }
-    }
-  }
-}
-

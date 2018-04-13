@@ -1,13 +1,16 @@
 void switchMatrixLoop() {
   //loop through columns, loop through rows and read outputs
-  for(int column = 0; column < COLUMNS; column++) 
+  for(int row = 0; row < ROWS; row++) 
   {
-    digitalWrite(ColPins[column], LOW); //Power On Column
-    for(int row = 0; row < ROWS; row++)
+    digitalWrite(RowPins[row], LOW); //Power Low on column
+    for(int column = 0; column < COLUMNS; column++)
     {
-      keyChangeCheck(!digitalRead(RowPins[row]), row, column);       
+      //Pass inverted pin state of ColPin as row state because of INPUT_PULLUP
+      //If the switch is pressed, this column should be pulled LOW by the column pin.
+      //By inverting this a pressed key is 1 and a released key is 0.
+      keyChangeCheck(!digitalRead(ColPins[column]), row, column);       
     }
-    digitalWrite(ColPins[column], HIGH); //Power Off Column
+    digitalWrite(RowPins[row], HIGH); //Power back to High on Column
   }
 }
 
@@ -32,34 +35,3 @@ int keyChangeCheck(bool currentState, int row, int column)
     keyReleaseHandler(Keymap[currentLayer][row][column]);
   }
 }
-
-
-void keyPressHandler(int key) 
-{
-  if(key == LAYER_RAISE){
-    Keyboard.releaseAll();
-    releaseAllSwitchStates();
-    currentLayer = 0;
-  }
-  else if(key == NO_ACTION){
-    // Do nothing
-  }
-  else {
-    Keyboard.press(key);
-  }
-}
-
-void keyReleaseHandler(int key) {
-  if(key == LAYER_RAISE){
-    Keyboard.releaseAll();
-    releaseAllSwitchStates();
-    currentLayer = 1;
-  }
-  else if(key == NO_ACTION){
-    // Do nothing
-  }
-  else {
-    Keyboard.release(key);
-  }
-}
-
