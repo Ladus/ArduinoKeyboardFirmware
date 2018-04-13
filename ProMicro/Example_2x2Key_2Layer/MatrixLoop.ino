@@ -2,16 +2,18 @@ void switchMatrixLoop() {
   //loop through columns, loop through rows and read outputs
   for(int column = 0; column < COLUMNS; column++) 
   {
-    digitalWrite(ColPins[column], HIGH); //Power On Column
-    for(int row = 0; row < ROWS; row++){
-      keyChangeCheck(digitalRead(RowPins[row]), row, column);       
+    digitalWrite(ColPins[column], LOW); //Power On Column
+    for(int row = 0; row < ROWS; row++)
+    {
+      keyChangeCheck(!digitalRead(RowPins[row]), row, column);       
     }
-    digitalWrite(ColPins[column], LOW); //Power Off Column
+    digitalWrite(ColPins[column], HIGH); //Power Off Column
   }
 }
 
 int keyChangeCheck(bool currentState, int row, int column) 
 {
+  //DEBUG: Serial.println( String("Col: ") + column + String(" Row: ") + row + String(" Current State: ") + currentState);
   bool previousState = switchStates[currentLayer][row][column];
   if(currentState == previousState)   //Key is the same
   {
@@ -19,28 +21,45 @@ int keyChangeCheck(bool currentState, int row, int column)
   }
   else if (currentState == HIGH)      //Key is pressed
   {
-    keyPressHandler(row, column);
+    //DEBUG: Serial.println(String(Keymap[currentLayer][row][column]) + String(" Key pressed, Layer: ") + currentLayer + String(" Row: ") + row + String(" Column: ") + column);
+    switchStates[currentLayer][row][column] = true;
+    keyPressHandler(Keymap[currentLayer][row][column]);
   }
   else                                //Key is released
   {
-    keyReleaseHandler(row, column);
+    //DEBUG: Serial.println(String(Keymap[currentLayer][row][column]) + String(" Key released, Layer: ") + currentLayer + String(" Row: ") + row + String(" Column: ") + column);
+    switchStates[currentLayer][row][column] = false;
+    keyReleaseHandler(Keymap[currentLayer][row][column]);
   }
 }
 
 
-void keyPressHandler(int row, int column) 
+void keyPressHandler(int key) 
 {
-  //Get Key Status
-  
-  //else now pressed
-  //  check if no action then do nothing
-  //  check if layer button then check if changed, if changed release all before changing layer
-  //    create release all/clear pressedButtons array function
-  //  get button from keymap according to layer,row,column number and press
+  if(key == LAYER_RAISE){
+    Keyboard.releaseAll();
+    releaseAllSwitchStates();
+    currentLayer = 0;
+  }
+  else if(key == NO_ACTION){
+    // Do nothing
+  }
+  else {
+    Keyboard.press(key);
+  }
 }
 
-void keyReleaseHandler(int row, int column) {
-  //per key check if previously pressed, and not anymore (release key[layer,row,col])
-  //if releasekey = layer key then releaseAll
+void keyReleaseHandler(int key) {
+  if(key == LAYER_RAISE){
+    Keyboard.releaseAll();
+    releaseAllSwitchStates();
+    currentLayer = 1;
+  }
+  else if(key == NO_ACTION){
+    // Do nothing
+  }
+  else {
+    Keyboard.release(key);
+  }
 }
 
