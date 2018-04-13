@@ -14,7 +14,9 @@ http://builder.swillkb.com/
 
 ## Example 2x2Key 2Layer
 An example project to get the basics to work with just 4 buttons. 
-It requires 4 pins, 2 output(Columns) and 2 input(Rows).
+It requires 4 pins, 2 output(Columns) and 2 inputs (Rows).
+It uses INPUT_PULLUP pins as inputs, which will be pulled down from the rows when a switch is pressed.
+This allows for the more common diode direction from column to row.
 
 The pin variables in "Example_2x2Key_2Layer.ino" should be adjusted to correspond to the pins you used on your board.
 
