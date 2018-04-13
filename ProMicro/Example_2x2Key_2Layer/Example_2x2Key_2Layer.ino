@@ -19,7 +19,7 @@ const int NO_ACTION = 0;
 const int LAYER_RAISE = 1;
 
 //Keymap
-bool switchStates[LAYERS][ROWS][COLUMNS];
+bool switchStates[ROWS][COLUMNS];
 int currentLayer = 1; //0 raised; 1 default; 
 
 
