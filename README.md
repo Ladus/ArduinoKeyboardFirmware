@@ -24,8 +24,8 @@ The pin variables in "Example_2x2Key_2Layer.ino" should be adjusted to correspon
 
 |       | Col0  | Col1  |     |        | Col0  | Col1  |
 | ---   | ---   | ---   | --- | ---    | ---   | ---   |
-|Row 0  | 1     | 2     |     | Row 0  | !     | @     |
-|Row 1  | 3     | Raise |     | Row 1  | #     | Raise |
+|Row 0  | 1     | 2     |     | Row 0  | R     | O     |
+|Row 1  | 3     | Raise |     | Row 1  | Y     | Raise |
 
 ## Planck 12x4Key 3Layer
 **Not Implemented Yet**
