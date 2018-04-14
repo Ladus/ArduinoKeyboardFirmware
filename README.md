@@ -8,6 +8,9 @@ http://pcbheaven.com/wikipages/How_Key_Matrices_Works/
 http://www.keyboard-layout-editor.com/
 * For using the above json data to generate a Plate and Case cutout file:  
 http://builder.swillkb.com/
+* For ascii & arduino keyboard specific keycodes see:  
+http://www.asciitable.com/  
+https://www.arduino.cc/en/Reference/KeyboardModifiers
 
 ## Supported Boards:
 * Pro Micro (Tested on 5V 16MHz, but it should work on 3.3V 8MHz as well)
