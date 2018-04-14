@@ -29,6 +29,17 @@ The pin variables in "Example_2x2Key_2Layer.ino" should be adjusted to correspon
 |Row 0  | 1     | 2     |     | Row 0  | R     | O     |
 |Row 1  | 3     | Raise |     | Row 1  | Y     | Raise |
 
+## Example 3x3Key 2Layer
+An example project to get the basics to work with just 9 buttons. 
+It requires 6 pins, 3 output(Columns) and 3 inputs (Rows).
+It uses INPUT_PULLUP pins as inputs, which will be pulled down from the rows when a switch is pressed.
+This allows for the more common diode direction from column to row.
+
+The pin variables in "Example_2x2Key_2Layer.ino" should be adjusted to correspond to the pins you used on your board.
+
+![3x3 keymap layout](https://raw.githubusercontent.com/Ladus/ArduinoKeyboardFirmware/development/ProMicro/Example_3x3Key_3Layer/keyboard-layout.png)
+
+
 ## Planck 12x4Key 3Layer
 **Not Implemented Yet**
 The project for which I started this endeavour. Wanting to create my own Planck-like Grid Keyboard, with 48 keys (12x4)
