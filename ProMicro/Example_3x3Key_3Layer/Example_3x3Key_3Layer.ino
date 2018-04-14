@@ -1,22 +1,23 @@
 #include <Keyboard.h>
 ////Config variables
 //Matrix Setup
-const int LAYERS = 2;
-const int ROWS = 2;
-const int COLUMNS = 2;
+const int LAYERS = 3;
+const int ROWS = 3;
+const int COLUMNS = 3;
 
 //Loop Delay
 int delayLoopPin = 21;
 
 //Input pins
-int ColPins[COLUMNS] = {2,3};
-int RowPins[ROWS] = {4,5};
+int ColPins[COLUMNS] = {2,3,4};
+int RowPins[ROWS] = {5,6,7};
 
 ////System Variables
 
 //Default Buttons
 const int NO_ACTION = 0;
 const int LAYER_RAISE = 1;
+const int LAYER_LOWER = 2;
 
 //Keymap
 bool switchStates[ROWS][COLUMNS];
@@ -33,6 +34,7 @@ void loop()
 {
   delayByPin();
   switchMatrixLoop();
+  delay(10);
 }
 
 void delayByPin() {
