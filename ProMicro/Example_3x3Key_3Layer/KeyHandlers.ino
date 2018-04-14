@@ -5,6 +5,11 @@ void keyPressHandler(int key) //Key Press
     releaseAllSwitchStates();
     currentLayer = 0;
   }
+  else if(key == LAYER_LOWER){
+    Keyboard.releaseAll();
+    releaseAllSwitchStates();
+    currentLayer = 2;
+  }
   else if(key == NO_ACTION){
     // Do nothing
   }
@@ -16,6 +21,11 @@ void keyPressHandler(int key) //Key Press
 void keyReleaseHandler(int key) //Key Release
 {
   if(key == LAYER_RAISE){
+    Keyboard.releaseAll();
+    releaseAllSwitchStates();
+    currentLayer = 1;
+  }
+  else if(key == LAYER_LOWER){
     Keyboard.releaseAll();
     releaseAllSwitchStates();
     currentLayer = 1;
