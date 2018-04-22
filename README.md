@@ -44,5 +44,9 @@ The pin variables in "Example_2x2Key_2Layer.ino" should be adjusted to correspon
 
 
 ## Planck 12x4Key 3Layer
-**Not Implemented Yet**
 The project for which I started this endeavour. Wanting to create my own Planck-like Grid Keyboard, with 48 keys (12x4)
+
+# Personal Notes Lessons / learnt
+* Mount Pro Micro upside down for usb port to become more accessible.
+* Use unisolated wire and shrinktube to connect rows and columns for easy of assembly & aesthetics.
+* Try to place screw holes in between keys.
