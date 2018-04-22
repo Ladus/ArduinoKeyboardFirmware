@@ -103,7 +103,7 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
       ',',
       '.',
       '/',
-      ' dus'
+      NO_ACTION
     },
     {//Row 3
       128, /*L Ctrl*/
@@ -113,7 +113,7 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
       LAYER_LOWER, /*,*/ 
       129, /*L Shift*/
       ' ',
-      LAYER_RAISE,/*
+      LAYER_RAISE,
       212,/*Delete*/
       NO_ACTION,
       NO_ACTION,
