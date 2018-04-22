@@ -1,179 +1,181 @@
-int Keymap[3][4][12] = {
-  //Raised layer 0
-  {
-    { //Layer 0 Row 0
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
+//For ascii & arduino keyboard specific keycodes see:
+//http://www.asciitable.com/
+//https://www.arduino.cc/en/Reference/KeyboardModifiers
+
+const int Keymap[LAYERS][ROWS][COLUMNS] = 
+{
+  {//Layer Raise
+    {//Row 0
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      KEY_HOME,/*Homr*/
+      KEY_PAGE_DOWN,/*pgdwn*/
+      '(',
+      ')',
+      KEY_PAGE_UP,/*pgup*/
+      KEY_END,/*end*/
+      NO_ACTION,
+      NO_ACTION,
+      '='
     },
-    { //Layer 0 Row 1
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
+    {//Row 1
+      NO_ACTION,
+      '_',
+      '|',
+      KEY_LEFT_ARROW,
+      KEY_DOWN_ARROW,
+      '{',
+      '}',
+      KEY_UP_ARROW,
+      KEY_RIGHT_ARROW,
+      '&',
+      ':',
+      '"'
     },
-    { //Layer 0 Row 2
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
+    {//Row 2
+      NO_ACTION,
+      '!',
+      '@',
+      '#',
+      '<',
+      '[',
+      ']',
+      '>',
+      '$',
+      '%',
+      '?',
+      NO_ACTION
     },
-    { //Layer 0 Row 3
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
+    {//Row 3
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      LAYER_LOWER,
+      NO_ACTION,
+      NO_ACTION,
+      LAYER_RAISE,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION
     }
   },
-  //Default layer 1
-  {
-    { //Layer 1 Row 0
-      179, /*Tab*/
-      113, /*q*/
-      119, /*w*/
-      101, /*e*/
-      114, /*r*/
-      116, /*t*/
-      121, /*y*/
-      117, /*u*/
-      105, /*i*/
-      111, /*o*/
-      112, /*p*/
-      178  /*backspace*/
+  {//Layer Default
+    {//Row 0
+      177, /*esc*/
+      'q',
+      'w',
+      'e',
+      'r',
+      't',
+      'y',
+      'u',
+      'i',
+      'o',
+      'p',
+      176 /*Return/Enter*/
     },
-    { //Layer 1 Row 1
-      129, /*Left Shift*/
-      97,  /*a*/
-      115, /*s*/
-      100, /*d*/
-      102, /*f*/
-      103, /*g*/
-      104, /*h*/
-      106, /*j*/
-      107, /*k*/
-      108, /*l*/
-      59,  /*;*/
-      39   /*'*/
+    {//Row 1
+      179, /*tab*/
+      'a',
+      's',
+      'd',
+      'f',
+      'g',
+      'h',
+      'j',
+      'k',
+      'l',
+      ';',
+      '\''
     },
-    { //Layer 1 Row 2
-      128, /*Left Ctrl*/
-      122, /*z*/
-      120, /*x*/
-      99,  /*c*/
-      118, /*v*/
-      98,  /*b*/
-      110, /*n*/
-      109, /*m*/
-      44,  /*,*/
-      46,  /*.*/
-      47,  /*/*/
-      92   /*\*/
+    {//Row 2
+      NO_ACTION,
+      'z',
+      'x',
+      'c',
+      'v',
+      'b',
+      'n',
+      'm',
+      ',',
+      '.',
+      '/',
+      ' dus'
     },
-    { //Layer 1 Row 3
-      177, /*Escape*/
-      131, /*Super/Windows/GUI/System*/
-      130, /*Left Alt*/
-      0,   /**/
-      1,   /*lower*/
-      176, /*enter*/
-      32,  /*space*/
-      3,   /*raise*/
-      0,   /**/
-      0,   /**/
-      0,   /**/
-      0    /**/
+    {//Row 3
+      128, /*L Ctrl*/
+      131, /*L Gui/Windows/super*/
+      130, /*L Alt*/
+      178, /*backspace*/
+      LAYER_LOWER, /*,*/ 
+      129, /*L Shift*/
+      ' ',
+      LAYER_RAISE,/*
+      212,/*Delete*/
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION
     }
   },
-  //Lower layer 2
-  {
-    { //Layer 2 Row 0
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
+  {//Layer Lower
+    {//Row 0
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      '/',
+      '-',
+      '^',
+      '~',
+      '+',
+      '*',
+      NO_ACTION,
+      NO_ACTION,
+      '='
     },
-    { //Layer 2 Row 1
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
+    {//Row 1
+      NO_ACTION,
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9',
+      '0',
+      '`'
     },
-    { //Layer 2 Row 2
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
+    {//Row 2
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      '\\',
+      NO_ACTION
     },
-    { //Layer 3 Row 
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
+    {//Row 3
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      LAYER_LOWER,
+      NO_ACTION,
+      NO_ACTION,
+      LAYER_RAISE,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION
     }
   }
 };
