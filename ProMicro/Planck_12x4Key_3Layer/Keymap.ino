@@ -48,15 +48,15 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
       NO_ACTION
     },
     {//Row 3
-      NO_ACTION,
-      NO_ACTION,
-      NO_ACTION,
-      NO_ACTION,
-      LAYER_LOWER,
-      NO_ACTION,
-      NO_ACTION,
+      128, /*L Ctrl*/
+      131, /*L Gui/Windows/super*/
+      130, /*L Alt*/
+      178, /*backspace*/
+      LAYER_LOWER, /*,*/ 
+      129, /*L Shift*/
+      ' ',
       LAYER_RAISE,
-      NO_ACTION,
+      212,/*Delete*/
       NO_ACTION,
       NO_ACTION,
       NO_ACTION
@@ -164,15 +164,15 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
       NO_ACTION
     },
     {//Row 3
-      NO_ACTION,
-      NO_ACTION,
-      NO_ACTION,
-      NO_ACTION,
-      LAYER_LOWER,
-      NO_ACTION,
-      NO_ACTION,
+      128, /*L Ctrl*/
+      131, /*L Gui/Windows/super*/
+      130, /*L Alt*/
+      178, /*backspace*/
+      LAYER_LOWER, /*,*/ 
+      129, /*L Shift*/
+      ' ',
       LAYER_RAISE,
-      NO_ACTION,
+      212,/*Delete*/
       NO_ACTION,
       NO_ACTION,
       NO_ACTION
