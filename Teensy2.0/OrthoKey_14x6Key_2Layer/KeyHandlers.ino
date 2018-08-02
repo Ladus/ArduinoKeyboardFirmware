@@ -1,3 +1,12 @@
+void releaseAllSwitchStates() //Clear switchStates array
+{
+  for(int y = 0; y < ROWS; y++){
+    for(int z = 0; z < COLUMNS; z++){
+      switchStates[ROWS][COLUMNS] = false;
+    }
+  }
+}
+
 void keyPressHandler(int key) //Key Press
 {
   if(key == LAYER_RAISE){
@@ -14,6 +23,7 @@ void keyPressHandler(int key) //Key Press
     // Do nothing
   }
   else {
+    digitalWrite(11, HIGH);
     Keyboard.press(key);
   }
 }
@@ -35,15 +45,6 @@ void keyReleaseHandler(int key) //Key Release
   }
   else {
     Keyboard.release(key);
-  }
-}
-
-
-void releaseAllSwitchStates() //Clear switchStates array
-{
-  for(int y = 0; y < ROWS; y++){
-    for(int z = 0; z < COLUMNS; z++){
-      switchStates[ROWS][COLUMNS] = false;
-    }
+    digitalWrite(11, LOW);
   }
 }
