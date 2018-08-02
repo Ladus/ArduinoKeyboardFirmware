@@ -21,20 +21,14 @@ const int LAYER_LOWER = 2;
 
 //Keymap
 bool switchStates[ROWS][COLUMNS];
-int currentLayer = 0 //0 raised; 1 default; 
+int currentLayer = 0; //0 raised; 1 default; 
 
 
 void setup()
 {
   setupPins();
   Serial.begin(9600); 
-}
-
-void loop()
-{
-  delayByPin();
-  switchMatrixLoop();
-  delay(10);
+  pinMode(11, OUTPUT);
 }
 
 void delayByPin() {
@@ -45,4 +39,11 @@ void delayByPin() {
   {
     delay(8000);
   }
+}
+
+void loop()
+{
+  delayByPin();
+  switchMatrixLoop();
+  delay(10);
 }
