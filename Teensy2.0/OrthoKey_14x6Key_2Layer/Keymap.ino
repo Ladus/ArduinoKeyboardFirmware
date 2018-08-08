@@ -19,7 +19,7 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
       KEY_F10,
       KEY_F11,
       KEY_F12,
-      KEY_DELETE
+      NO_ACTION
     },
     {
       '`', /*tab*/
@@ -35,7 +35,7 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
       '0',
       '-',
       '=',
-      KEY_BACKSPACE
+      NO_ACTION
     },
     {
       KEY_TAB,
@@ -51,7 +51,7 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
       'p',
       '[',
       ']',
-      KEY_RETURN
+      NO_ACTION
     },
     {
       KEY_CAPS_LOCK,
@@ -67,7 +67,7 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
       ';',
       '\'',
       '\\',
-      KEY_RIGHT_SHIFT
+      NO_ACTION     
     },
     {
       KEY_LEFT_SHIFT,
@@ -80,26 +80,124 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
       'm',
       ',',
       '.',
-      '/',
-      KEY_HOME,
-      KEY_UP,
-      KEY_END
+      '/', 
+      KEY_PAGE_UP,
+      KEY_LEFT_GUI,
+      NO_ACTION
     },
     {
       KEY_LEFT_CTRL,
-      KEY_LEFT_GUI,
+      LAYER_RAISE,
       KEY_LEFT_ALT,
       KEY_BACKSPACE,
+      KEY_LEFT_SHIFT,
+      KEY_RETURN,
       ' ',
       ' ',
+      KEY_DELETE, 
+      KEY_RIGHT_CTRL,
+      KEY_HOME,
+      KEY_PAGE_DOWN,
+      KEY_END,
+      NO_ACTION
+    }
+  },
+  {//Layer Default
+    {
+      KEY_ESC, /*esc*/
+      KEY_F1,
+      KEY_F2,
+      KEY_F3,
+      KEY_F4,
+      KEY_F5,
+      KEY_F6,
+      KEY_F7,
+      KEY_F8,
+      KEY_F9,
+      KEY_F10,
+      KEY_F11,
+      KEY_F12,
+      NO_ACTION
+    },
+    {
+      '`', /*tab*/
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9',
+      '0',
+      '-',
+      '=',
+      NO_ACTION
+    },
+    {
+      KEY_TAB,
+      'q',
+      'w',
+      'e',
+      'r',
+      't',
+      'y',
+      'u',
+      'i',
+      'o',
+      'p',
+      '[',
+      ']',
+      NO_ACTION
+    },
+    {
+      KEY_CAPS_LOCK,
+      'a',
+      's',
+      'd',
+      'f',
+      'g',
+      'h',
+      'j',
+      'k',
+      'l',
+      ';',
+      '\'',
+      '\\',
+      NO_ACTION     
+    },
+    {
+      KEY_LEFT_SHIFT,
+      'z',
+      'x',
+      'c',
+      'v',
+      'b',
+      'n',
+      'm',
+      ',',
+      '.',
+      '/', 
+      KEY_UP,
+      KEY_LEFT_GUI,
+      NO_ACTION
+    },
+    {
+      KEY_LEFT_CTRL,
+      LAYER_RAISE,
+      KEY_LEFT_ALT,
+      KEY_BACKSPACE,
+      KEY_LEFT_SHIFT,
       ' ',
       ' ',
-      KEY_DELETE,
-      KEY_RIGHT_ALT,
+      KEY_RETURN,
+      KEY_DELETE, 
       KEY_RIGHT_CTRL,
       KEY_LEFT,
       KEY_DOWN,
-      KEY_RIGHT
+      KEY_RIGHT,
+      NO_ACTION
     }
   }
 };

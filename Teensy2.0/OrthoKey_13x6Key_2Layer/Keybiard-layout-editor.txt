@@ -1,6 +1,6 @@
-[{c:"#de333d",t:"#940000"},"~\n\n\n\n\n\n\n\n\nEsc",{c:"#808080",t:"#cfcfcf",a:7},"F1","F2","F3","F4",{c:"#242424",t:"#999999"},"F5","F6","F7","F8",{c:"#808080",t:"#cfcfcf"},"F9","F10","F11","F12"],
-[{y:0.25,a:4,fa:[0,0,0,0,0,0,0,0,0,6]},"~\n\n\n\n\n\n\n\n\n`","!\n\n\n\n\n\n\n\n\n1","@\n\n\n\n\n\n\n\n\n2","#\n\n\n\n\n\n\n\n\n3","$\n\n\n\n\n\n\n\n\n4","%\n\n\n\n\n\n\n\n\n5","^\n\n\n\n\n\n\n\n\n6","&\n\n\n\n\n\n\n\n\n7","*\n\n\n\n\n\n\n\n\n8","(\n\n\n\n\n\n\n\n\n9",")\n\n\n\n\n\n\n\n\n0","_\n\n\n\n\n\n\n\n\n-","+\n\n\n\n\n\n\n\n\n="],
-[{c:"#303030",a:7},"Tab",{c:"#808080"},"Q","W","E","R","T","Y","U","I","O","P","[","]"],
-[{c:"#303030"},"Cap",{c:"#808080"},"A","S","D","F","G","H","J","K","L",";","'",{a:4},"|\n\n\n\n\n\n\n\n\n\\"],
-[{c:"#303030",a:7},"Shift",{c:"#808080"},"Z","X","C","V","B","N","M",{a:4},"<\n\n\n\n\n\n\n\n\n,",">\n\n\n\n\n\n\n\n\n.","?\n\n\n\n\n\n\n\n\n/",{c:"#303030",a:7},"&uarr;","Super"],
-["Ctrl","fn","Alt","bkspc","Return","Shift",{w:2},"","Delete","Ctrl","&larr;","&darr;","&rarr;"]
+[{c:"#de333d",t:"#940000"},"~\n\n\n\n\n\n\n\n\nEsc",{x:0.25,c:"#808080",t:"#cfcfcf",a:7},"F1","F2","F3","F4",{c:"#242424",t:"#999999"},"F5","F6","F7","F8",{c:"#808080",t:"#cfcfcf"},"F9","F10","F11","F12"],
+[{y:0.25,a:4,fa:[0,0,0,0,0,0,0,0,0,6]},"~\n\n\n\n\n\n\n\n\n`",{x:0.25},"!\n\n\n\n\n\n\n\n\n1","@\n\n\n\n\n\n\n\n\n2","#\n\n\n\n\n\n\n\n\n3","$\n\n\n\n\n\n\n\n\n4","%\n\n\n\n\n\n\n\n\n5","^\n\n\n\n\n\n\n\n\n6","&\n\n\n\n\n\n\n\n\n7","*\n\n\n\n\n\n\n\n\n8","(\n\n\n\n\n\n\n\n\n9",")\n\n\n\n\n\n\n\n\n0","_\n\n\n\n\n\n\n\n\n-","+\n\n\n\n\n\n\n\n\n="],
+[{c:"#303030",a:7},"Tab",{x:0.25,c:"#808080"},"Q","W","E","R","T","Y","U","I","O","P","[","]"],
+[{c:"#303030"},"Cap",{x:0.25,c:"#808080"},"A","S","D","F","G","H","J","K","L",";","'",{a:4},"|\n\n\n\n\n\n\n\n\n\\"],
+[{c:"#303030",a:7},"Shift",{x:0.25,c:"#808080"},"Z","X","C","V","B","N","M",{a:4},"<\n\n\n\n\n\n\n\n\n,",">\n\n\n\n\n\n\n\n\n.","?\n\n\n\n\n\n\n\n\n/",{c:"#303030",a:7},"&uarr;","Super"],
+["Ctrl",{x:0.25},"fn","Alt","bkspc","Shift",{w:2},"","Return","Delete","Ctrl","&larr;","&darr;","&rarr;"]
