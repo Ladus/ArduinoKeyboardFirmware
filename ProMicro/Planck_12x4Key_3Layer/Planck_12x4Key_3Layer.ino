@@ -9,8 +9,8 @@ const int COLUMNS = 12;
 int delayLoopPin = 21;
 
 //Input pins
-int ColPins[COLUMNS] = {9,8,7,6,5,4,3,2,10,16,14,15};
-int RowPins[ROWS] = {21,20,19,18};
+int ColPins[COLUMNS] = {6,7,8,9,10,16,14,15,18,19,20,21};
+int RowPins[ROWS] = {2,3,4,5};
 
 ////System Variables
 

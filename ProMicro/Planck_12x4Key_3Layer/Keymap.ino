@@ -6,57 +6,57 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
 {
   {//Layer Raise
     {//Row 0
-      NO_ACTION,
-      NO_ACTION,
-      NO_ACTION,
-      KEY_HOME,/*Homr*/
-      KEY_PAGE_DOWN,/*pgdwn*/
-      '(',
-      ')',
-      KEY_PAGE_UP,/*pgup*/
-      KEY_END,/*end*/
-      NO_ACTION,
-      NO_ACTION,
-      '='
+      '`',
+      '1',
+      '2',
+      '3',/*Homr*/
+      '4',/*pgdwn*/
+      '5',
+      '6',
+      '7',/*pgup*/
+      '8',/*end*/
+      '9',
+      '0',
+      KEY_DELETE
     },
     {//Row 1
       NO_ACTION,
-      '_',
-      '|',
+      NO_ACTION,
+      KEY_HOME,
+      KEY_PAGE_UP,
+      KEY_PAGE_DOWN,
+      KEY_END,
       KEY_LEFT_ARROW,
       KEY_DOWN_ARROW,
-      '{',
-      '}',
       KEY_UP_ARROW,
       KEY_RIGHT_ARROW,
-      '&',
-      ':',
-      '"'
+      '-',
+      '='
     },
     {//Row 2
       NO_ACTION,
-      '!',
-      '@',
-      '#',
-      '<',
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
       '[',
       ']',
-      '>',
-      '$',
-      '%',
-      '?',
+      '\\',
       NO_ACTION
     },
     {//Row 3
-      128, /*L Ctrl*/
-      131, /*L Gui/Windows/super*/
-      130, /*L Alt*/
-      178, /*backspace*/
-      LAYER_LOWER, /*,*/ 
-      129, /*L Shift*/
+      KEY_LEFT_CTRL,
+      KEY_LEFT_GUI, 
+      KEY_LEFT_ALT,
+      NO_ACTION,
+      LAYER_LOWER,
+      ' ',
       ' ',
       LAYER_RAISE,
-      212,/*Delete*/
+      NO_ACTION,
       NO_ACTION,
       NO_ACTION,
       NO_ACTION
@@ -64,7 +64,7 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
   },
   {//Layer Default
     {//Row 0
-      177, /*esc*/
+      KEY_TAB, /*esc*/
       'q',
       'w',
       'e',
@@ -75,10 +75,10 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
       'i',
       'o',
       'p',
-      176 /*Return/Enter*/
+      KEY_DELETE /*Return/Enter*/
     },
     {//Row 1
-      179, /*tab*/
+      KEY_ESC, /*tab*/
       'a',
       's',
       'd',
@@ -92,7 +92,7 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
       '\''
     },
     {//Row 2
-      NO_ACTION,
+      KEY_LEFT_SHIFT,
       'z',
       'x',
       'c',
@@ -103,18 +103,18 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
       ',',
       '.',
       '/',
-      NO_ACTION
+      KEY_RETURN
     },
     {//Row 3
-      128, /*L Ctrl*/
-      131, /*L Gui/Windows/super*/
-      130, /*L Alt*/
-      178, /*backspace*/
-      LAYER_LOWER, /*,*/ 
-      129, /*L Shift*/
+      KEY_LEFT_CTRL,
+      KEY_LEFT_GUI, 
+      KEY_LEFT_ALT,
+      NO_ACTION,
+      LAYER_LOWER,
+      ' ',
       ' ',
       LAYER_RAISE,
-      212,/*Delete*/
+      NO_ACTION,
       NO_ACTION,
       NO_ACTION,
       NO_ACTION
@@ -122,32 +122,32 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
   },
   {//Layer Lower
     {//Row 0
-      NO_ACTION,
-      NO_ACTION,
-      NO_ACTION,
-      '/',
-      '-',
-      '^',
-      '~',
-      '+',
-      '*',
-      NO_ACTION,
-      NO_ACTION,
-      '='
+      KEY_F1,
+      KEY_F2,
+      KEY_F3,
+      KEY_F4,
+      KEY_F5,
+      KEY_F6,
+      KEY_F7,
+      KEY_F8,
+      KEY_F9,
+      KEY_F10,
+      KEY_F11,
+      KEY_F12
     },
     {//Row 1
+      KEY_CAPS_LOCK,
+      206, /* Print screen */
       NO_ACTION,
-      '1',
-      '2',
-      '3',
-      '4',
-      '5',
-      '6',
-      '7',
-      '8',
-      '9',
-      '0',
-      '`'
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION
     },
     {//Row 2
       NO_ACTION,
@@ -155,24 +155,24 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
       NO_ACTION,
       NO_ACTION,
       NO_ACTION,
+      212,/* Break - 76+136 */
       NO_ACTION,
       NO_ACTION,
       NO_ACTION,
       NO_ACTION,
       NO_ACTION,
-      '\\',
       NO_ACTION
     },
     {//Row 3
-      128, /*L Ctrl*/
-      131, /*L Gui/Windows/super*/
-      130, /*L Alt*/
-      178, /*backspace*/
+      KEY_LEFT_CTRL, /*L Ctrl*/
+      KEY_LEFT_GUI, /*L Gui/Windows/super*/
+      KEY_LEFT_ALT, /*L Alt*/
+      NO_ACTION, /*backspace*/
       LAYER_LOWER, /*,*/ 
-      129, /*L Shift*/
+      ' ', /*L Shift*/
       ' ',
       LAYER_RAISE,
-      212,/*Delete*/
+      NO_ACTION,/*Delete*/
       NO_ACTION,
       NO_ACTION,
       NO_ACTION
