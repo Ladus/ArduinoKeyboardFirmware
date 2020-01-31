@@ -25,13 +25,13 @@ int keyChangeCheck(bool currentState, int row, int column)
   else if (currentState == HIGH)      //Key is pressed
   {
     //DEBUG: Serial.println(String(Keymap[currentLayer][row][column]) + String(" Key pressed, Layer: ") + currentLayer + String(" Row: ") + row + String(" Column: ") + column);
-    switchStates[row][column] = true;
     keyPressHandler(Keymap[currentLayer][row][column]);
+    switchStates[row][column] = true;
   }
   else                                //Key is released
   {
     //DEBUG: Serial.println(String(Keymap[currentLayer][row][column]) + String(" Key released, Layer: ") + currentLayer + String(" Row: ") + row + String(" Column: ") + column);
-    switchStates[row][column] = false;
     keyReleaseHandler(Keymap[currentLayer][row][column]);
+    switchStates[row][column] = false;
   }
 }
