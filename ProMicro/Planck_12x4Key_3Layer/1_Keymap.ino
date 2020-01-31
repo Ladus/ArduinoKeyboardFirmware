@@ -114,10 +114,10 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
       ' ',
       ' ',
       LAYER_RAISE,
-      '1',
-      '2',
-      '3',
-      '4'
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION
     }
   },
   {////////////////////////////////////////////Layer Lower

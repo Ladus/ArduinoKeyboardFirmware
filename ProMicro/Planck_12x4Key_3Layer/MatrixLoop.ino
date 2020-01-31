@@ -1,4 +1,4 @@
-void switchMatrixLoop() {
+void matrixLoop() {
   //loop through columns, loop through rows and read outputs
   for(int row = 0; row < ROWS; row++) 
   {
@@ -14,24 +14,20 @@ void switchMatrixLoop() {
   }
 }
 
-int keyChangeCheck(bool currentState, int row, int column) 
+void keyChangeCheck(bool currentState, int row, int column) 
 {
   //DEBUG: Serial.println( String("Col: ") + column + String(" Row: ") + row + String(" Current State: ") + currentState);
   bool previousState = switchStates[row][column];
-  if(currentState == previousState)   //Key is the same
+  if(currentState == previousState) //Key is the same
+  { } //No change
+  else if (currentState == HIGH) //Key is pressed
   {
-    //No change
-  }
-  else if (currentState == HIGH)      //Key is pressed
-  {
-    //DEBUG: Serial.println(String(Keymap[currentLayer][row][column]) + String(" Key pressed, Layer: ") + currentLayer + String(" Row: ") + row + String(" Column: ") + column);
-    keyPressHandler(Keymap[currentLayer][row][column]);
     switchStates[row][column] = true;
+    keyPressHandler(Keymap[currentLayer][row][column]);
   }
-  else                                //Key is released
+  else //Key is released
   {
-    //DEBUG: Serial.println(String(Keymap[currentLayer][row][column]) + String(" Key released, Layer: ") + currentLayer + String(" Row: ") + row + String(" Column: ") + column);
-    keyReleaseHandler(Keymap[currentLayer][row][column]);
     switchStates[row][column] = false;
+    keyReleaseHandler(Keymap[currentLayer][row][column]);
   }
 }
