@@ -1,6 +1,6 @@
 void keyPressHandler(int key) //Key Press
 {
-  Debug(); //Prints debug info if debug is enabled
+  DebugPrintKeyState(); //Prints debug info if debug is enabled
   
   if(key == LAYER_RAISE){
     layerChange(0);
@@ -18,7 +18,7 @@ void keyPressHandler(int key) //Key Press
 
 void keyReleaseHandler(int key) //Key Release
 {
-  Debug(); //Prints debug info if debug is enabled
+  DebugPrintKeyState(); //Prints debug info if debug is enabled
   
   if(key == LAYER_RAISE){
     layerChange(1);
