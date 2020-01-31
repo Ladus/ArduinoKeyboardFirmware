@@ -1,4 +1,5 @@
 #include <Keyboard.h>
+
 ////Config variables
 //Matrix Setup
 const int LAYERS = 3;
@@ -22,19 +23,26 @@ const int LAYER_LOWER = 2;
 bool switchStates[ROWS][COLUMNS];
 int currentLayer = 1; //0 raised; 1 default; 2 lowered;
 
-
 void setup()
 {
+  // Setup serial for sending debug info if debugging is enabled
   if(EnableDebug)
   {
-    Serial.begin(9600); //Used for outputting debug info   
+    Serial.begin(9600);   
   }
   
-  setupPins();
+  //Setup col pins
+  for(int i=0; i<COLUMNS; i++){
+    pinMode(ColPins[i], INPUT_PULLUP);
+  }
+
+  //Setup row pins
+  for(int i=0; i<ROWS; i++){
+    pinMode(RowPins[i], OUTPUT);
+  }
 }
 
 void loop()
 {
   matrixLoop();
-  delay(10);
 }
