@@ -4,7 +4,7 @@
 
 const int Keymap[LAYERS][ROWS][COLUMNS] = 
 {
-  {//Layer Raise
+  {////////////////////////////////////////////Layer Raise
     {//Row 0
       '`',
       '1',
@@ -34,7 +34,7 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
       '='
     },
     {//Row 2
-      NO_ACTION,
+      KEY_LEFT_SHIFT,
       NO_ACTION,
       NO_ACTION,
       NO_ACTION,
@@ -62,9 +62,9 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
       NO_ACTION
     }
   },
-  {//Layer Default
+  {////////////////////////////////////////////Layer Default
     {//Row 0
-      KEY_TAB, /*esc*/
+      KEY_ESC,
       'q',
       'w',
       'e',
@@ -75,10 +75,10 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
       'i',
       'o',
       'p',
-      KEY_DELETE /*Return/Enter*/
+      KEY_BACKSPACE /*Return/Enter*/
     },
     {//Row 1
-      KEY_ESC, /*tab*/
+      KEY_TAB,
       'a',
       's',
       'd',
@@ -114,13 +114,13 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
       ' ',
       ' ',
       LAYER_RAISE,
-      NO_ACTION,
-      NO_ACTION,
-      NO_ACTION,
-      NO_ACTION
+      '1',
+      '2',
+      '3',
+      '4'
     }
   },
-  {//Layer Lower
+  {////////////////////////////////////////////Layer Lower
     {//Row 0
       KEY_F1,
       KEY_F2,
@@ -150,7 +150,7 @@ const int Keymap[LAYERS][ROWS][COLUMNS] =
       NO_ACTION
     },
     {//Row 2
-      NO_ACTION,
+      KEY_LEFT_SHIFT,
       NO_ACTION,
       NO_ACTION,
       NO_ACTION,
