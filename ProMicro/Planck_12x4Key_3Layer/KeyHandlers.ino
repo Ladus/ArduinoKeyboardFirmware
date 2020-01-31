@@ -1,12 +1,12 @@
 void keyPressHandler(int key) //Key Press
 {
+  Debug(); //Prints debug info if debug is enabled
+  
   if(key == LAYER_RAISE){
-    releaseAllSwitchStates();
-    currentLayer = 0;
+    layerChange(0);
   }
   else if(key == LAYER_LOWER){
-    releaseAllSwitchStates();
-    currentLayer = 2;
+    layerChange(2);
   }
   else if(key == NO_ACTION){
     // Do nothing
@@ -18,13 +18,13 @@ void keyPressHandler(int key) //Key Press
 
 void keyReleaseHandler(int key) //Key Release
 {
+  Debug(); //Prints debug info if debug is enabled
+  
   if(key == LAYER_RAISE){
-    releaseAllSwitchStates();
-    currentLayer = 1;
+    layerChange(1);
   }
   else if(key == LAYER_LOWER){
-    releaseAllSwitchStates();
-    currentLayer = 1;
+    layerChange(1);
   }
   else if(key == NO_ACTION){
     // Do nothing
@@ -34,31 +34,22 @@ void keyReleaseHandler(int key) //Key Release
   }
 }
 
-void releaseAllSwitchStates() //Clear switchStates array
-{  
-  for(int y = 0; y < ROWS; y++){
-    for(int z = 0; z < COLUMNS; z++){
-      
-      if(
-       switchStates[ROWS][COLUMNS] == false
-      )
-      {
-        Serial.println( String(Keymap[currentLayer][y][z]) + String(" Key pressed") );
-      }
+void layerChange(int layer) // Change layer and release keys that are not the same on the other layer
+{
+  int previousLayer = currentLayer;
+  currentLayer = layer;
 
-      //Dont release modifiers
-      int key = Keymap[currentLayer][y][z];
-      if(
-       key != KEY_LEFT_CTRL && 
-       key != KEY_LEFT_ALT &&
-       key != KEY_LEFT_SHIFT &&
-       key != KEY_LEFT_GUI &&
-       switchStates[ROWS][COLUMNS] == true
-      )
+  for(int y = 0; y < ROWS; y++) // For each row
+  {
+    for(int z = 0; z < COLUMNS; z++) // For each column
+    {
+      if(switchStates[y][z]) // If switch is enabled 
       {
-        Serial.println( String(Keymap[currentLayer][y][z]) + String(" Key released") );
-        Keyboard.release(key);
-        switchStates[ROWS][COLUMNS] = false;
+        // If key is not the same key on the new layer, release it
+        if(Keymap[previousLayer][y][z] != Keymap[currentLayer][y][z])
+        {
+          Keyboard.release(Keymap[previousLayer][y][z]);
+        }
       }
     }
   }
