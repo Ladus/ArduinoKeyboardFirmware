@@ -9,9 +9,67 @@
 
 const byte Keymap[LAYERS][ROWS][COLUMNS] = 
 {
-  {//Layer Default
+  {//0 Raised layer
     {
-      M(KEY_TAB),
+      '`',
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9',
+      '0',
+      M(KEY_DELETE)
+    },
+    {
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      M(KEY_PAGE_UP),
+      M(KEY_HOME,
+      M(KEY_UP),
+      M(KEY_END),
+      NO_ACTION    
+    },
+    {
+      M(KEY_LEFT_SHIFT),
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      M(KEY_PAGE_DOWN),
+      M(KEY_LEFT),
+      M(KEY_DOWN),
+      M(KEY_RIGHT), 
+      NO_ACTION
+    },
+    {
+      M(KEY_LEFT_CTRL),
+      NO_ACTION,
+      M(KEY_LEFT_GUI),
+      M(KEY_LEFT_ALT),
+      NO_ACTION,
+      ' ',
+      ' ',
+      LAYER_RAISE,
+      NO_ACTION, 
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION
+    }
+  },
+  {//1 Default layer
+    {
+      M(KEY_ESC),
       'q',
       'w',
       'e',
@@ -22,10 +80,10 @@ const byte Keymap[LAYERS][ROWS][COLUMNS] =
       'i',
       'o',
       'p',
-      '['
+      M(KEY_BACKSPACE)
     },
     {
-      M(KEY_CAPS_LOCK),
+      M(KEY_TAB),
       'a',
       's',
       'd',
@@ -36,7 +94,7 @@ const byte Keymap[LAYERS][ROWS][COLUMNS] =
       'k',
       'l',
       ';',
-      '\''    
+      M(KEY_ENTER)    
     },
     {
       M(KEY_LEFT_SHIFT),
@@ -50,21 +108,79 @@ const byte Keymap[LAYERS][ROWS][COLUMNS] =
       ',',
       '.',
       '/', 
-      M(KEY_UP)
+      '\''
     },
     {
       M(KEY_LEFT_CTRL),
-      LAYER_RAISE,
+      NO_ACTION,
+      M(KEY_LEFT_GUI),
       M(KEY_LEFT_ALT),
-      M(KEY_BACKSPACE),
-      M(KEY_LEFT_SHIFT),
+      LAYER_LOWER,
       ' ',
       ' ',
-      M(KEY_RETURN),
-      M(KEY_DELETE), 
-      M(KEY_RIGHT_CTRL),
-      M(KEY_LEFT),
-      M(KEY_DOWN)
+      LAYER_RAISE,
+      NO_ACTION, 
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION
+    }
+  },
+  {//2 Lowered layer
+    {
+      M(KEY_F1),
+      M(KEY_F2),
+      M(KEY_F3),
+      M(KEY_F4),
+      M(KEY_F5),
+      M(KEY_F6),
+      M(KEY_F7),
+      M(KEY_F8),
+      M(KEY_F9),
+      M(KEY_F10),
+      M(KEY_F11),
+      M(KEY_F12)
+    },
+    {
+      M(KEY_CAPS_LOCK),
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      '[',
+      ']',
+      NO_ACTION 
+    },
+    {
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION,
+      '-',
+      '=',
+      NO_ACTION, 
+      NO_ACTION
+    },
+    {
+      M(KEY_LEFT_CTRL),
+      NO_ACTION,
+      M(KEY_LEFT_GUI),
+      M(KEY_LEFT_ALT),
+      LAYER_LOWER,
+      ' ',
+      ' ',
+      NO_ACTION,
+      NO_ACTION, 
+      NO_ACTION,
+      NO_ACTION,
+      NO_ACTION
     }
   }
 };

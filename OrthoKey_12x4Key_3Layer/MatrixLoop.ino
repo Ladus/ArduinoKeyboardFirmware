@@ -15,7 +15,7 @@ void switchMatrixLoop() {
 }
 
 void keyChangeCheck(bool currentState, int row, int column) 
-{
+{  
   bool previousState = switchStates[row][column];
   if(currentState == previousState)   //Key is the same
   {
@@ -25,11 +25,15 @@ void keyChangeCheck(bool currentState, int row, int column)
   {
     switchStates[row][column] = true;
     keyPressHandler(Keymap[currentLayer][row][column]);
+    
+    DebugPrintKeyState();
   }
   else                                //Key is released
   {
-    Serial.println(String(Keymap[currentLayer][row][column]) + String(" Key released, Layer: ") + currentLayer + String(" Row: ") + row + String(" Column: ") + column);
+    //Serial.println(String(Keymap[currentLayer][row][column]) + String(" Key released, Layer: ") + currentLayer + String(" Row: ") + row + String(" Column: ") + column);
     switchStates[row][column] = false;
     keyReleaseHandler(Keymap[currentLayer][row][column]);
+
+    DebugPrintKeyState();
   }
 }

@@ -8,7 +8,7 @@ void DebugPrintKeyState()//Debugging
       Serial.print(switchStates[y][z]);  
     }
     Serial.println("");
-   }
+   }   
    Serial.println("");
   }
 }
