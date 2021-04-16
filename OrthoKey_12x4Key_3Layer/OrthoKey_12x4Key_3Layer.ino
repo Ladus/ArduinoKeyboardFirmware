@@ -2,7 +2,7 @@
 
 ////Config variables
 //Matrix Setup
-const int LAYERS = 1;
+const int LAYERS = 3;
 const int ROWS = 4;
 const int COLUMNS = 12;
 
