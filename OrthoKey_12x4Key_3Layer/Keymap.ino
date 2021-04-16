@@ -7,7 +7,6 @@
 #endif
 #define M(n) ((n) & KEYCODE_MASK)
 
-
 const byte Keymap[LAYERS][ROWS][COLUMNS] = 
 {
   {//Layer Default

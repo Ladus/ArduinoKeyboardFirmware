@@ -2,7 +2,7 @@ void releaseAllSwitchStates() //Clear switchStates array
 {
   for(int y = 0; y < ROWS; y++){
     for(int z = 0; z < COLUMNS; z++){
-      switchStates[ROWS][COLUMNS] = false;
+      switchStates[y][z] = false;
     }
   }
 }
