@@ -33,7 +33,7 @@ const byte Keymap[LAYERS][ROWS][COLUMNS] =
       NO_ACTION,
       NO_ACTION,
       M(KEY_PAGE_UP),
-      M(KEY_HOME,
+      M(KEY_HOME),
       M(KEY_UP),
       M(KEY_END),
       NO_ACTION    
