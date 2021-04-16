@@ -2,26 +2,26 @@
 ////Config variables
 //Matrix Setup
 const int LAYERS = 1;
-const int ROWS = 6;
-const int COLUMNS = 14;
+const int ROWS = 4;
+const int COLUMNS = 12;
 
 //Loop Delay
 int delayLoopPin = 21;
 
 //Input pins
-int ColPins[COLUMNS] = {0,1,2,3,4,5,6,7,8,9,10,12,13,14};
-int RowPins[ROWS] = {20,19,22,17,16,15};
+int ColPins[COLUMNS] = {21,20,19,18,17,11,5,4,3,2,1,0};
+int RowPins[ROWS] = {10,9,13,12};
 
 ////System Variables
 
 //Default Buttons
-const int NO_ACTION = 0;
-const int LAYER_RAISE = 1;
-const int LAYER_LOWER = 2;
+const byte NO_ACTION = 0;
+const byte LAYER_RAISE = 1;
+const byte LAYER_LOWER = 2;
 
 //Keymap
 bool switchStates[ROWS][COLUMNS];
-int currentLayer = 0; //0 raised; 1 default; 
+int currentLayer = 1; //0 raised; 1 default; 
 
 
 void setup()
