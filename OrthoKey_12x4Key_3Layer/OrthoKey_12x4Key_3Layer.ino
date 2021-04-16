@@ -25,7 +25,7 @@ const int LAYER_LOWER = 2;
 
 //Keymap
 bool switchStates[ROWS][COLUMNS];
-int currentLayer = 1; //0 raised; 1 default; 
+int currentLayer = 1; //0 raised; 1 default; 2 lowered; 
 
 
 void setup()

@@ -2,12 +2,7 @@
 //http://www.asciitable.com/
 //https://www.arduino.cc/en/Reference/KeyboardModifiers
 
-#ifdef M
-#undef M
-#endif
-#define M(n) ((n) & KEYCODE_MASK)
-
-const byte Keymap[LAYERS][ROWS][COLUMNS] = 
+const unsigned int Keymap[LAYERS][ROWS][COLUMNS] = 
 {
   {//0 Raised layer
     {
@@ -22,7 +17,7 @@ const byte Keymap[LAYERS][ROWS][COLUMNS] =
       '8',
       '9',
       '0',
-      M(KEY_DELETE)
+      KEY_DELETE
     },
     {
       NO_ACTION,
@@ -32,10 +27,10 @@ const byte Keymap[LAYERS][ROWS][COLUMNS] =
       NO_ACTION,
       NO_ACTION,
       NO_ACTION,
-      M(KEY_PAGE_UP),
-      M(KEY_HOME),
-      M(KEY_UP),
-      M(KEY_END),
+      KEY_PAGE_UP,
+      KEY_HOME,
+      KEY_UP,
+      KEY_END,
       NO_ACTION    
     },
     {
@@ -46,17 +41,17 @@ const byte Keymap[LAYERS][ROWS][COLUMNS] =
       NO_ACTION,
       NO_ACTION,
       NO_ACTION,
-      M(KEY_PAGE_DOWN),
-      M(KEY_LEFT),
-      M(KEY_DOWN),
-      M(KEY_RIGHT), 
+      KEY_PAGE_DOWN,
+      KEY_LEFT,
+      KEY_DOWN,
+      KEY_RIGHT, 
       NO_ACTION
     },
     {
-      M(KEY_LEFT_CTRL),
+      KEY_LEFT_CTRL,
       NO_ACTION,
-      M(KEY_LEFT_GUI),
-      M(KEY_LEFT_ALT),
+      KEY_LEFT_GUI,
+      KEY_LEFT_ALT,
       NO_ACTION,
       ' ',
       ' ',
@@ -69,7 +64,7 @@ const byte Keymap[LAYERS][ROWS][COLUMNS] =
   },
   {//1 Default layer
     {
-      M(KEY_ESC),
+      KEY_ESC,
       'q',
       'w',
       'e',
@@ -80,10 +75,10 @@ const byte Keymap[LAYERS][ROWS][COLUMNS] =
       'i',
       'o',
       'p',
-      M(KEY_BACKSPACE)
+      KEY_BACKSPACE
     },
     {
-      M(KEY_TAB),
+      KEY_TAB,
       'a',
       's',
       'd',
@@ -94,10 +89,10 @@ const byte Keymap[LAYERS][ROWS][COLUMNS] =
       'k',
       'l',
       ';',
-      M(KEY_ENTER)    
+      KEY_ENTER    
     },
     {
-      M(KEY_LEFT_SHIFT),
+      KEY_LEFT_SHIFT,
       'z',
       'x',
       'c',
@@ -111,10 +106,10 @@ const byte Keymap[LAYERS][ROWS][COLUMNS] =
       '\''
     },
     {
-      M(KEY_LEFT_CTRL),
+      KEY_LEFT_CTRL,
       NO_ACTION,
-      M(KEY_LEFT_GUI),
-      M(KEY_LEFT_ALT),
+      KEY_LEFT_GUI,
+      KEY_LEFT_ALT,
       LAYER_LOWER,
       ' ',
       ' ',
@@ -127,21 +122,21 @@ const byte Keymap[LAYERS][ROWS][COLUMNS] =
   },
   {//2 Lowered layer
     {
-      M(KEY_F1),
-      M(KEY_F2),
-      M(KEY_F3),
-      M(KEY_F4),
-      M(KEY_F5),
-      M(KEY_F6),
-      M(KEY_F7),
-      M(KEY_F8),
-      M(KEY_F9),
-      M(KEY_F10),
-      M(KEY_F11),
-      M(KEY_F12)
+      KEY_F1,
+      KEY_F2,
+      KEY_F3,
+      KEY_F4,
+      KEY_F5,
+      KEY_F6,
+      KEY_F7,
+      KEY_F8,
+      KEY_F9,
+      KEY_F10,
+      KEY_F11,
+      KEY_F12
     },
     {
-      M(KEY_CAPS_LOCK),
+      KEY_CAPS_LOCK,
       NO_ACTION,
       NO_ACTION,
       NO_ACTION,
@@ -169,10 +164,10 @@ const byte Keymap[LAYERS][ROWS][COLUMNS] =
       NO_ACTION
     },
     {
-      M(KEY_LEFT_CTRL),
+      KEY_LEFT_CTRL,
       NO_ACTION,
-      M(KEY_LEFT_GUI),
-      M(KEY_LEFT_ALT),
+      KEY_LEFT_GUI,
+      KEY_LEFT_ALT,
       LAYER_LOWER,
       ' ',
       ' ',
