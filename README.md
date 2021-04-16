@@ -1,5 +1,26 @@
 # ArduinoKeyboardFirmware
-Arduino keyboard firmware to convert a key matrix into keyboard input with multiple switchable key layers. Initially made only for the Pro Micro, but may be extended towards other boards later on.
+Arduino keyboard firmware to convert a key matrix into keyboard input with multiple switchable key layers. Initially made for use with an Arduino Pro Micro or Teensy 2.0.
+
+## Confirmed working arduino boards:
+* Pro Micro (Tested on 5V 16MHz, but it should work on 3.3V 8MHz as well)
+* Teensy 2.0
+
+## Ortho 12x4Key 3Layer
+The project for which I started this endeavour. Wanting to create my own Planck-like Grid Keyboard, with 48 keys (12x4). The amount of rows and columns can be easily adjusted at the top of the main .ino file, underneath `////Config variables` 
+
+### Files
+#### OrthoKey_12x4Key_2Layer.ino
+This is the main file, here you can edit the amount of rows and columns that you want to use, and map the pins for those rows and columns.
+It also hosts the main application loop.
+#### Keymap.ino
+This is where you configure your keymap.
+#### SetupPins.ino
+This sets the pinmode for the input and output pins according to the configured data.
+#### MatrixLoop.ino
+This script loops through the matrix to determine the state for each switch. Next it checks the new state to the previous state to check whether the switch has changed. If the state has changed it will result in a switch being pressed or released, which will trigger the KeyHandlers.ino's function.
+#### KeyHandlers.ino
+This script is called from the MatrixLoop. This is where the keypress or release will be converted into an character from the Keymap.ino.
+
 
 ## Usefull additional information:
 * For how to setup a key matrix and how/why it works I highly recommend the guide over at PCBHeaven:  
@@ -11,42 +32,3 @@ http://builder.swillkb.com/
 * For ascii & arduino keyboard specific keycodes see:  
 http://www.asciitable.com/  
 https://www.arduino.cc/en/Reference/KeyboardModifiers
-
-## Supported Boards:
-* Pro Micro (Tested on 5V 16MHz, but it should work on 3.3V 8MHz as well)
-
-## Example 2x2Key 2Layer
-An example project to get the basics to work with just 4 buttons. 
-It requires 4 pins, 2 output(Columns) and 2 inputs (Rows).
-It uses INPUT_PULLUP pins as inputs, which will be pulled down from the rows when a switch is pressed.
-This allows for the more common diode direction from column to row.
-
-The pin variables in "Example_2x2Key_2Layer.ino" should be adjusted to correspond to the pins you used on your board.
-
-![2x2 keymap layout](https://raw.githubusercontent.com/Ladus/ArduinoKeyboardFirmware/development/ProMicro/Example_2x2Key_2Layer/keyboard-layout.png)
-
-### Rows and Columns
-
-|       | Col0  | Col1  |     |        | Col0  | Col1  |
-| ---   | ---   | ---   | --- | ---    | ---   | ---   |
-|Row 0  | 1     | 2     |     | Row 0  | R     | O     |
-|Row 1  | 3     | Raise |     | Row 1  | Y     | Raise |
-
-## Example 3x3Key 2Layer
-An example project to get the basics to work with just 9 buttons. 
-It requires 6 pins, 3 output(Columns) and 3 inputs (Rows).
-It uses INPUT_PULLUP pins as inputs, which will be pulled down from the rows when a switch is pressed.
-This allows for the more common diode direction from column to row.
-
-The pin variables in "Example_2x2Key_2Layer.ino" should be adjusted to correspond to the pins you used on your board.
-
-![3x3 keymap layout](https://raw.githubusercontent.com/Ladus/ArduinoKeyboardFirmware/development/ProMicro/Example_3x3Key_3Layer/keyboard-layout.png)
-
-
-## Planck 12x4Key 3Layer
-The project for which I started this endeavour. Wanting to create my own Planck-like Grid Keyboard, with 48 keys (12x4)
-
-# Personal Notes Lessons / learnt
-* Mount Pro Micro upside down for usb port to become more accessible.
-* Use unisolated wire and shrinktube to connect rows and columns for easy of assembly & aesthetics.
-* Try to place screw holes in between keys.
