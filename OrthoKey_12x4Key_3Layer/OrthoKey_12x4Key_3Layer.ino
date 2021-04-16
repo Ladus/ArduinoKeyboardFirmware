@@ -10,8 +10,8 @@ const int COLUMNS = 12;
 int delayLoopPin = 21;
 
 //Input pins
-int ColPins[COLUMNS] = {21,20,19,18,17,11,5,4,3,2,1,0};
-int RowPins[ROWS] = {10,9,13,12};
+int ColPins[COLUMNS] = {21,20,19,18,17,22,5,4,3,2,1,0};
+int RowPins[ROWS] = {12,13,9,10};
 
 //Output debug info to serial monitor
 const bool EnableDebug = true;
@@ -49,6 +49,5 @@ void loop()
 {
   delayByPin();
   switchMatrixLoop();
-  DebugPrintKeyState();
   delay(10);
 }

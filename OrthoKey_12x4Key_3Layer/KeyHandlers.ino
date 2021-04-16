@@ -23,7 +23,7 @@ void keyPressHandler(int key) //Key Press
     // Do nothing
   }
   else {
-    digitalWrite(11, HIGH);
+    digitalWrite(11, HIGH); 
     Keyboard.press(key);
   }
 }
